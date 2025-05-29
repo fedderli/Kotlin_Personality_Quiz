@@ -5,163 +5,224 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E3F2FD"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="16dp"
+        android:layout_margin="8dp">
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jestes ekstrawertykiem czy introwertykiem?"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Czy lubisz ludzi ?" />
-
-        <RadioGroup
-            android:id="@+id/LikePeople"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="tak" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="nie" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kiedy wypełniasz ten quiz ?" />
-
-        <DatePicker
-            android:id="@+id/my_calendar_datepicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:datePickerMode="calendar"
-            android:layout_margin="10dp"
-            android:padding="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wybierz aktywnosci ktore lubisz robic:"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="imprezy"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="koncerty"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="wystepy publiczne"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="spacery po lesie"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="czytanie ksiazek"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ogladanie filmow"/>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jak czesto wychodzisz z domu"/>
+            android:text="Jesteś ekstrawertykiem czy introwertykiem?"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="#1976D2"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#1976D2"
+            android:textStyle="bold" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="10dp"
-            android:layout_marginTop="10dp">
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#FFFFFF">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="nigdy"
-                android:layout_marginEnd="8dp" />
+                android:text="Czy lubisz ludzi?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
 
-            <SeekBar
-                android:id="@+id/my_seekbar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="100"
-                android:progress="50" />
-
-            <TextView
+            <RadioGroup
+                android:id="@+id/LikePeople"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nie wracam \n do domu"
-                android:layout_marginStart="8dp" />
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tak" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nie" />
+            </RadioGroup>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="wybierz twoj ulubiony kolor"
-            />
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Spinner>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kiedy wypełniasz ten quiz?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <DatePicker
+                android:id="@+id/my_calendar_datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="calendar" />
+        </LinearLayout>
 
 
-        <Chronometer
-            android:id="@+id/myChronometr"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:layout_margin="20dp"
-            android:layout_gravity="center"
-            />
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wybierz aktywności, które lubisz robić:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imprezy" />
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Koncerty" />
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Występy publiczne" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spacery po lesie" />
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Czytanie książek" />
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oglądanie filmów" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="pozostalo _  czasu"/>
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
-        <Button
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jak często wychodzisz z domu?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nigdy"
+                    android:layout_marginEnd="8dp" />
+
+                <SeekBar
+                    android:id="@+id/my_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:progress="50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nie wracam\ndo domu"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="zakoncz quiz"/>
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wybierz Twój ulubiony kolor:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Chronometer
+                android:id="@+id/myChronometr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pozostało _ czasu"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakończ quiz"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#1976D2"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
