@@ -25,8 +25,8 @@
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:background="#1976D2"
-            android:layout_marginBottom="16dp"
             android:elevation="4dp"
+            android:layout_marginBottom="16dp"
             android:layout_gravity="center"
             android:backgroundTint="#1976D2"
             android:textStyle="bold" />
@@ -56,10 +56,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <RadioButton
+                    android:id="@+id/YesLikePople"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tak" />
                 <RadioButton
+                    android:id="@+id/NoLikePople"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nie" />
@@ -112,17 +114,17 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imprezy" />
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Koncerty" />
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Występy publiczne" />
+                <CheckBox android:id="@+id/PartyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imprezy" />
+                <CheckBox android:id="@+id/ConcertsCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Koncerty" />
+                <CheckBox android:id="@+id/PublickCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Występy \npubliczne" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spacery po lesie" />
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Czytanie książek" />
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oglądanie filmów" />
+                <CheckBox android:id="@+id/ForestCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spacery \n po lesie" />
+                <CheckBox android:id="@+id/BooksCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Czytanie \n książek" />
+                <CheckBox android:id="@+id/FilmsCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oglądanie \n filmów" />
             </LinearLayout>
         </LinearLayout>
 
@@ -161,8 +163,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:max="100"
-                    android:progress="50" />
+                    android:max="4"
+                    android:progress="2" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -191,8 +193,12 @@
                 android:layout_marginBottom="8dp" />
 
             <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+
+                />
+
         </LinearLayout>
 
 
@@ -211,12 +217,14 @@
                 android:layout_marginBottom="8dp" />
 
             <TextView
+                android:id="@+id/TimerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pozostało _ czasu"
+                android:text="Pozostało 100 czasu"
                 android:textSize="14sp" />
 
             <Button
+                android:id="@+id/endButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Zakończ quiz"
