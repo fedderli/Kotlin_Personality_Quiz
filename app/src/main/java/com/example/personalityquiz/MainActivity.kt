@@ -79,10 +79,10 @@ class MainActivity : AppCompatActivity() {
 
         val colors = arrayOf("Czerwony", "Niebieski", "Zielony", "Żółty")
         val colorValues = arrayOf(
-            0xFFFF0000.toInt(),   // czerwony
-            0xFF2196F3.toInt(),   // niebieski
-            0xFF4CAF50.toInt(),   // zielony
-            0xFFFFEB3B.toInt()    // żółty
+            0xFFFF0000.toInt(),
+            0xFF2196F3.toInt(),
+            0xFF4CAF50.toInt(),
+            0xFFFFEB3B.toInt()
         )
 
         val spinner = findViewById<Spinner>(R.id.spinner)
@@ -90,9 +90,6 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
 
-        spinner.setSelection(1)
-        mainLayout.setBackgroundColor(colorValues[1])
-        introvert++
 
         spinner.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
@@ -137,6 +134,13 @@ class MainActivity : AppCompatActivity() {
         endButton.setOnClickListener {
             chronometer.stop()
             countDownTimer.cancel()
+            val intent = Intent(this@MainActivity, SummaryActivity::class.java)
+            intent.putExtra("Introvert" , introvert)
+            intent.putExtra("extrovert" , extrovert)
+            intent.putExtra("date" , selectedDate)
+            startActivity(intent)
+            finish()
+
         }
     }
 }
